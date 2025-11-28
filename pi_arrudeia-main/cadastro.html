@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Tela de Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Botão de tema -->
+  <button class="theme-toggle" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo_amarelo.png" alt="Arrudeia" />
+      </div>
+      <nav class="nav">
+        <a href="home.html">Início</a>
+        <a href="#">Locais</a>
+        <a href="feed.html">Roteiros</a>
+        <a href="#">Guias</a>
+        <a href="#">Eventos</a>
+      </nav>
+      <div class="user">
+        <a href="login.html" class="user-name">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main_login">
+    <div class="container">
+      <form action="" class="login-box">
+        <div class="cad">
+          <h2><a href="home.html" class="link">Home</a></h2>
+          <img class="logo" src="assets/logo_amarelo.png" alt="logo">
+          <h2><a href="login.html" class="link">Login</a></h2>  
+        </div>
+        
+        <!-- ... inputs iguais ... -->
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- ... igual -->
+  </footer>
+
+  <script>
+    // Script toggle inline (igual feed)
+    const themeToggle = document.querySelector('.theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+    const icon = themeToggle.querySelector('i');
+
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.hasAttribute('data-theme');
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>
