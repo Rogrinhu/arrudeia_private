@@ -402,6 +402,7 @@ body {
   border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
   background: #000;
 }
 
@@ -545,7 +546,7 @@ body {
  .tag:hover {
   background: var(--primary);
   color: white;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .footer {
@@ -565,7 +566,7 @@ body {
  
 /* Logo no footer */
 .footer-logo-img {
-  height: 56px;
+    height: 100px;
 }
  
 /* Ícones de redes sociais */

@@ -56,7 +56,7 @@
   
   /* Header */
   .header {
-    background: #003087;
+    background: var(--primary);
     color: white;
     padding: 1rem 0;
     position: sticky;
@@ -225,7 +225,7 @@
   }
   
   .footer-logo-img {
-    height: 50px;
+    height: 100px;
   }
   
   .social {
